@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="caring.css">
+    <title>Caring Hearts</title>
+</head>
+<body>
+   
+    <section>
+        <nav>
+            <div class="logo"> Social Good</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Donations</a></li>
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">FAQs</a></li>
+               
+                <!-- Profile Icon using Boxicons -->
+<li class="profile-icon" onclick="toggleProfile()">
+    <i class="bx bx-user"></i>
+</li>
+
+<!-- Profile Popup -->
+<div id="profile-popup" class="hidden">
+    <h3>Your Profile</h3>
+    <p>Total Donations: <span id="donation-count">0</span></p>
+
+    <h4>Donation Progress</h4>
+    <progress id="progress-bar" value="0" max="5"></progress>
+    <p id="progress-text">0 / 5 donations</p>
+
+    <h4>Achievements</h4>
+    <div id="achievements"></div>
+
+    <h4>Set Goals</h4>
+    <ul id="goal-list"></ul>
+
+    <button onclick="setNewGoal()">Set New Goal</button>
+</div>
+
+               
+            </ul>
+        </nav>
+    
+    </section>
+
+        
+    
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+

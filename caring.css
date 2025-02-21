@@ -1,0 +1,75 @@
+/* Header Styles */
+header {
+    background: #222; /* Dark background color */
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo on the Left */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    float: left;
+}
+
+/* Menu Items Floated to the Right */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    display: flex;
+    gap: 20px;
+}
+
+/* List Items */
+.nav-links li {
+    display: inline;
+}
+
+/* Links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+/* Profile Icon */
+.profile-icon {
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+/* Profile Popup */
+#profile-popup {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+#profile-popup.hidden {
+    display: none;
+}
+
+
+
