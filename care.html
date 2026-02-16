@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="caring.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <title>Caring Hearts</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="header-container">
+            <div class="logo">
+               Caring Hearts</div>
+                
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#donations">Donations</a></li>
+                <li><a href="#impact-stories">Stories</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><div class="profile-icon" onclick="toggleProfile()">
+                    <i class="bx bx-user"></i>
+                </div>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Popup -->
+<div id="profile-popup" class="hidden">
+    <!-- Close Button -->
+    <button class="close-btn" onclick="closeProfile()">X</button>
+
+    <div class="profile-container">
+    <h3> Profile</h3> 
+    <hr>
+    <p>Total Donations: <strong>GHS</strong><span id="total-donations">0</span></p>
+    <h4>Donation Progress</h4>
+    <progress id="progress-bar" value="0" max="20"></progress>
+    <p id="progress-text">0 / 0 donations</p>
+</div>
+  
+<hr>
+    <h4 class="Goal">Set Goal</h4>
+
+    <p id="goal-warning" >Please select a goal</p>
+
+    <!-- Dropdown to Select Goal (1-20) -->
+    <select id="goal-selection">
+        <option value="" disabled selected>Select a goal</option>
+    </select>
+
+    <button id="set-goal-btn" onclick="setNewGoal()">Set Goal</button>
+
+    <hr>
+    <h4 class="achieve">Achievements</h4>
+    
+    <div id="achievements"></div>
+</div>
+
+<section id="home">
+    <div class="hero-page">
+        <img src="assets/Img1.jpeg" alt="donation-items">
+   
+    </div>
+    <div class="hero-overlay">
+        <div class="hero-text">
+            <h1>Welcome to Caring Hearts</h1>
+            <p>We believe God for hard things. Help us make a difference <br> in the lives of others. The bible
+            in areas such as education,health etc. A donation from you can put a brighten 
+        up someone's face</p>
+            
+        </div>
+        <div class="event-box">
+            <h2> <i class="bx bxs-star"></i> Upcoming Event</h2>
+            <h3 >We are thrilled to annouce that we will be partaking a journey 
+            to put smiles on the faces of Baptist students as 
+            part of our annual harvest events. We look forward to finding volunteers
+            who will be part of this memorable journey
+            </h3>
+            <p class="content" !important>Date: 1<sup>st</sup>April, 2025</p>
+            <p class="content">Location: Pax Chapel, KNUST</p>
+            <button class="register-btn" onclick="openRegistrationForm(event)">Register Now</button>
+        </div>
+       
+    
+
+</section>
+   
+    <section id="about">
+        <div class="info">
+            <img src="assets/logo.png" alt="heart-in-hands">
+            <h1>About Us</h1>
+            <p> Caring Hearts is a non-profit organization under the pax romana chaplaincy
+                that aims to help the less fortunate within and outside our chaplaincy.
+                We believe that everyone deserves a chance to live a better life. We provide food, shelter, and other necessities to those in need.Also we 
+                provide support to our chaplaincy when the need arises.
+                Our vision is to make the world a better place for us to live together beautifully.
+                We have a mission with a vision. We appeal to you to support us in anyway you can.</p>
+        </div>
+    </section>
+
+
+    <hr>
+    
+   
+        <section id="donations">
+            <h1 class="heading">Donation Stories</h1>
+            <div class="grid-container">
+                
+                <div class="grid-item">
+                    <img src="assets/img6.jpeg" alt="Cause 1">
+                    <h3>Food Items</h3>
+                    <p class="brief">Helping children access education.</p>
+                    <div class="expanded-content">
+                        <p>Our aim for the SnrHelp this year is to support 50 students in shs.Be a part of this initiave by donating</p>
+                        <button class="donate-btn" onclick="openDonationForm(event)">Donate</button>
+                    </div>
+                </div>
+        
+                <div class="grid-item">
+                    <img src="assets/img3.jpg" alt="Cause 2">
+                    <h3>Rak School Initiative</h3>
+                    <p class="brief">Support Rak students</p>
+                    <div class="expanded-content">
+                        <p>As part of our celebrations, we aim to support Rak students with desks to support them in their studies. </p>
+                        <button class="donate-btn" onclick="openDonationForm(event)">Donate</button>
+                    </div>
+                </div>
+        
+                <div class="grid-item">
+                    <img src="assets/img4.jpeg" alt="Cause 3">
+                    <h3>Pax Chapel</h3>
+                    <p class="brief">Chapel Building Project</p>
+                    <div class="expanded-content">
+                        <p>Contribute to a good cause by helping us finish the chapel building</p>
+                        <button class="donate-btn" onclick="openDonationForm(event)">Donate</button>
+                    </div>
+                </div>
+        
+                <div class="grid-item">
+                    <img src="assets/img5.avif" alt="Cause 4">
+                    <h3>Healthcare Support</h3>
+                    <p class="brief">Providing medical assistance.</p>
+                    <div class="expanded-content">
+                        <p>Help us contribute to the renovation of KATH</p>
+                        <button class="donate-btn" onclick="openDonationForm(event)">Donate</button>
+                    </div>
+                </div>
+
+                            <!-- Donation Form Popup -->
+<form id="donation-form-popup">
+    <div class="form-container">
+        <span class="close-btn" onclick="closeDonationForm()">X</span>
+        <h3>Make a Donation</h3>
+        <hr>
+        <label for="name">Enter your name:</label>
+        <input type="text" placeholder="Name" id="name" required/>
+        <hr>
+        <label for="email">Enter your email:</label>
+        <input type="email" placeholder="Email" id="email" required/>
+        <hr>
+        <label for="donation-amount">Enter Amount:</label>
+        <input type="number" id="donation-amount" min="1" required/>
+        <hr>
+        <button onclick="submitDonation()">Donate Now</button>
+    </div>
+</form>
+            
+
+        </section>
+
+        <section id="impact-stories">
+            <h1 class="heading1">Impact-Stories</h1>
+            <div class="slideshow-container">
+                <button class="prev" onclick="moveSlide(-1)"><i class="bx bxs-left-arrow-alt"></i></button>
+                <div class="grid-wrapper">
+                    
+                    <!-- Slide 1 -->
+                    <div class="grid1-slide">
+                        <div class="grid1-item">
+                            <img src="assets/img2.jpeg" alt="Story 1">
+                            <h3>Accra Orphanage Home Donation</h3>
+                            <p class="brief2">We donated items to the Accra Orphanage Home. We were supported by the youth with the vision and with your help we were able to get 
+                                these items we donated. Thank you for your incredible support and for making this donation a success on behalf oh the chaplaincy board 
+                            and students at the Accra Orphanage Home
+                        </p>
+                        <p class="add"><strong>Donation Date:</strong> 31<sup>st</sup>  March, 2025</p>
+                        <p class="add"><strong>Coordinator:</strong> Dr. Rose-Mary Gyening </p>
+                        </div>
+                    </div>
+        
+                    <!-- Slide 2 -->
+                    <div class="grid1-slide">
+                        <div class="grid1-item">
+                            <img src="assets/img8.jpeg" alt="Story 2">
+                            <h3>BoreHole Initiative</h3>
+                            <p class="brief1">Providing clean water to communities. We drilled a borehole at Walewale in the 
+                                North-East region of again for its residents
+                            </p>
+                            <p class="add"><strong>Donation Date:</strong> 31<sup>st</sup>  May, 2024</p>
+                            <p class="add"><strong>Coordinator:</strong> Dr. Rose-Mary Gyening </p>
+                        </div>
+                    </div>
+        
+                    <!-- Slide 3 -->
+                    <div class="grid1-slide">
+                        <div class="grid1-item">
+                            <img src="assets/img7.jpeg" alt="Story 3">
+                            <h3>SnrHelp</h3>
+                            <p class="brief1">We donated over 6000 exercise books and 800 textbooks and notebooks to
+                                senior high school students
+                            </p>
+                            <p class="add"><strong>Donation Date:</strong> 1<sup>st</sup>  April, 2025</p>
+                            <p class="add"><strong>Coordinator:</strong> Dr. Zhoim Agyemang </p>
+                        </div>
+                    </div>
+        
+                    <!-- Slide 4 -->
+                    <div class="grid1-slide">
+                        <div class="grid1-item">
+                            <img src="assets/Img1.jpeg" alt="Story 4">
+                            <h3>Provisions</h3>
+                            <p class="brief1">We gave out several food items to our brothers and sisters who are homeless</p>
+                            <p class="add"><strong>Donation Date:</strong> 1<sup>st</sup>  April, 2025</p>
+                            <p class="add"><strong>Coordinator:</strong> Dr. Rose-Mary Gyening </p>
+                        </div>
+                    </div>
+        
+                   
+                </div>
+                <button class="next" onclick="moveSlide(1)"><i class="bx bxs-right-arrow-alt"></i></button>
+            </div>
+        </section>
+        
+      
+        <section id="faqs">
+            <h1 class="faq-heading">Frequently Asked Questions</h1>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">What is our mission?</div>
+                    <p class="faq-answer">We are a subgroup in the Pax Romana Chapel Handling donations</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How can I donate?</div>
+                    <p class="faq-answer">You can donate by clicking the donate button on our homepage and filling out the donation form.</p>
+                </div>
+        
+                <div class="faq-item">
+                    <div class="faq-question">How are donations used?</div>
+                    <p class="faq-answer">All donations go directly towards funding charity projects like education, caring for the less priviledged. 
+                        You can click on stories on the nav bar to see some of our impact-stories</p>
+                </div>
+            </div>
+        </section>
+        
+
+
+        
+        <footer id="footer">
+            <div class="footer-contents">
+                <h1>Caring-Hearts</h1>
+            <p>Copyright Kydd Gimd 2025</p>
+            </div>
+            
+            <div class="footer-icons">
+                <a href="#" ><i class="bx bxl-facebook"></i></a>
+                <a href="#" ><i class="bx bxl-twitter"></i></a>
+                <a href="#" ><i class="bx bxl-instagram"></i></a>
+                <a href="#" ><i class="bx bxl-linkedin"></i></a>
+                <a href="#" ><i class="bx bxl-youtube"></i></a>
+            </div>
+        </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
