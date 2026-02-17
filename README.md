@@ -4,7 +4,7 @@ A community-driven platform dedicated to connecting donors with meaningful cause
 **Caring Hearts Social** provides a transparent way to view upcoming events, set and track donation goals, and share the real-world impact of every contribution.
 
 ## 🌐 Live Demo
-Visit the site at: [caring.hearts.social](https://caring.hearts.social)
+Visit the site at: [https://yaakydd.github.io/Caring-Hearts/]
 
 ## ✨ Features
 
