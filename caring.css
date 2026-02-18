@@ -276,15 +276,15 @@ progress {
 
 /* Right Side: Event Box */
 .event-box {
-    position: relative;
-    width: 45%;
+    position: absolute;
+    width: 41%;
     background: #8BBDEC; /* Semi-transparent black */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    top: -500px;
+    top: -550px;
     height: 75vh;
-    right: -690px;
+    right: -170px;
     z-index: -1;
 }
 
@@ -304,7 +304,7 @@ progress {
     text-align: left;
     text-transform: uppercase;
     line-height: 29px;
-    color: #2980b9;
+    color: #112736;
 }
 
 .event-box p {
