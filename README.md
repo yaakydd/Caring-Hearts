@@ -25,3 +25,8 @@ The project is built with a clean, lightweight frontend architecture:
 ├── script.js           # Interactive features and donation tracking logic
 ├── LICENSE             # Project licensing information
 └── README.md           # Project documentation
+
+## Contributions
+1. Clone the app and create a new branch
+2. Name it color change
+3. Change all the colors on the website
