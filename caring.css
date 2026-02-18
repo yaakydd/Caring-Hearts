@@ -282,10 +282,9 @@ progress {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    top: -400px;
+    top: -500px;
     height: 75vh;
     right: -690px;
-   
     z-index: -1;
 }
 
@@ -810,4 +809,5 @@ progress {
     color: white;
     font-weight: 800;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
