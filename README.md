@@ -28,8 +28,10 @@ The project is built with a clean, lightweight frontend architecture:
 ```
 ## Contributions
 **1.Change the colors of the website.**
+
 **Task 1:* Create a new branch called "Awesome Colors"
 
 **2. Review the site, clone it and add any feature you suggest will improve the project"**
+
 **Task 2:* Create a branch and name it "New Feature"
 
