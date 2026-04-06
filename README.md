@@ -27,11 +27,9 @@ The project is built with a clean, lightweight frontend architecture:
 └── README.md           # Project documentation
 ```
 ## Contributions
-```contribution 1
 1.Change the colors of the website.
 Task: Create a new branch called "Awesome Colors"
-```
-```contribution 2
+
 2. Review the site, clone it and add any feature you suggest will improve the project"
 Task: Create a branch and name it "New Feature"
-```
+
