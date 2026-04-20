@@ -35,3 +35,5 @@ The project is built with a clean, lightweight frontend architecture:
 
 **Task 2:* Create a branch and name it "New Feature"
 
+## Arcitectural Design
+
